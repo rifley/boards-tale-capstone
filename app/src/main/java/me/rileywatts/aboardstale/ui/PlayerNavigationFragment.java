@@ -1,30 +1,46 @@
 package me.rileywatts.aboardstale.ui;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import org.parceler.Parcels;
+
 import me.rileywatts.aboardstale.R;
+import me.rileywatts.aboardstale.models.Player;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PlayerInventoryFragment extends Fragment implements View.OnClickListener{
+public class PlayerNavigationFragment extends Fragment implements View.OnClickListener{
     private ImageButton mUpButton;
     private ImageButton mDownButton;
     private ImageButton mLeftButton;
     private ImageButton mRightButton;
     private Context mContext;
+    private Player mPlayer;
 
-    public PlayerInventoryFragment() {
-        // Required empty public constructor
+    public static PlayerNavigationFragment newInstance(Player player) {
+        PlayerNavigationFragment playerNavigationFragment = new PlayerNavigationFragment();
+        Bundle args = new Bundle();
+        args.putParcelable("player", Parcels.wrap(player));
+        playerNavigationFragment.setArguments(args);
+        return playerNavigationFragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mPlayer = Parcels.unwrap(getArguments().getParcelable("player"));
+
     }
 
 
@@ -32,7 +48,7 @@ public class PlayerInventoryFragment extends Fragment implements View.OnClickLis
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_player_inventory, container, false);
+        View v = inflater.inflate(R.layout.fragment_player_navigation, container, false);
         mUpButton = (ImageButton) v.findViewById(R.id.upArrowImageButton);
         mDownButton = (ImageButton) v.findViewById(R.id.downArrowImageButton);
         mLeftButton = (ImageButton) v.findViewById(R.id.leftArrowImageButton);
@@ -51,7 +67,7 @@ public class PlayerInventoryFragment extends Fragment implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if( v == mUpButton) {
-            Toast.makeText(mContext, "North", Toast.LENGTH_SHORT).show();
+            Log.v("inside fragment", mPlayer.getHealth().toString());
         }
         if( v == mDownButton) {
             Toast.makeText(mContext, "South", Toast.LENGTH_SHORT).show();
