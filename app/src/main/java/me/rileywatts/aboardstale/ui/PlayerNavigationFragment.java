@@ -67,7 +67,8 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if( v == mUpButton) {
-            Log.v("inside fragment", mPlayer.getHealth().toString());
+            mPlayer.setHealth(-20);
+            Log.v("data change", mPlayer.getHealth().toString());
         }
         if( v == mDownButton) {
             Toast.makeText(mContext, "South", Toast.LENGTH_SHORT).show();
