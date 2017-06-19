@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/navBarTextViewBackground"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="0dp"
@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/upArrowImageButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="0dp"
@@ -35,6 +35,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginTop="0dp"
             android:scaleType="centerCrop"
+            android:background="@color/fadedCloudWhite"
             app:layout_constraintBottom_toTopOf="@+id/guideline17"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/guideline15"
@@ -44,9 +45,10 @@
             app:srcCompat="@drawable/uparrow" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/downArrowImageButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@color/fadedCloudWhite"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
@@ -59,12 +61,13 @@
             app:srcCompat="@drawable/downarrow" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/rightArrowImageButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
+            android:background="@color/fadedCloudWhite"
             android:layout_marginTop="0dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/guideline18"
@@ -76,9 +79,10 @@
             app:srcCompat="@drawable/rightarrow" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/leftArrowImageButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@color/fadedCloudWhite"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
