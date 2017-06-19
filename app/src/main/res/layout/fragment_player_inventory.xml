@@ -95,14 +95,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/guideline9"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2485323" />
+            app:layout_constraintGuide_percent="0.1" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline10"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.75" />
+            app:layout_constraintGuide_percent="0.9" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -123,14 +123,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/guideline13"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.85" />
+            app:layout_constraintGuide_percent="0.9" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline14"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.15" />
+            app:layout_constraintGuide_percent="0.1" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -151,14 +151,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/guideline17"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.44" />
+            app:layout_constraintGuide_percent="0.42" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline18"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.56" />
+            app:layout_constraintGuide_percent="0.58" />
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>
