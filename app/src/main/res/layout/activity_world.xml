@@ -6,4 +6,35 @@
     android:layout_height="match_parent"
     tools:context="me.rileywatts.aboardstale.ui.WorldActivity">
 
+
+    <fragment
+        android:id="@+id/playerInventoryFragment"
+        android:name="me.rileywatts.aboardstale.ui.PlayerInventoryFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.363"
+        tools:layout="@layout/fragment_player_inventory" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline8"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline19"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
 </android.support.constraint.ConstraintLayout>
