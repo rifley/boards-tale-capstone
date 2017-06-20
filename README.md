@@ -18,16 +18,16 @@ A choose your way adventure game for Android. A Board's Tale tells the story of 
 ## Planning
 #### MVP
 
-[x] Functioning navigation fragment
-[ ] Player Inventory fragment
-[ ] Allow players to travel the world with some interactivity
+- [x] Functioning navigation fragment
+- [ ] Player Inventory fragment
+- [ ] Allow players to travel the world with some interactivity
 
 
 #### Wants
-[ ] Conditional Combat system
-[ ] Conditional map interactivity
-[ ] Save game to user data
-[ ] More consistent thematics
+- [ ] Conditional Combat system
+- [ ] Conditional map interactivity
+- [ ] Save game to user data
+- [ ] More consistent thematics
 
 
 
