@@ -9,10 +9,12 @@ import android.util.Log;
 import org.parceler.Parcels;
 
 import me.rileywatts.aboardstale.R;
+import me.rileywatts.aboardstale.models.Level;
 import me.rileywatts.aboardstale.models.Player;
 
 public class WorldActivity extends AppCompatActivity {
     private Player player;
+    public Level levelOne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
