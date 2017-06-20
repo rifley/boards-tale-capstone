@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import org.parceler.Parcels;
 
+import java.util.List;
+
 import me.rileywatts.aboardstale.Constants;
 import me.rileywatts.aboardstale.R;
 import me.rileywatts.aboardstale.models.Level;
@@ -44,7 +46,7 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPlayer = Parcels.unwrap(getArguments().getParcelable("player"));
-        currentLevel = Constants.TEST_ONE;
+        currentLevel = Constants.LEVEL_THREE;
 
     }
 
@@ -72,11 +74,15 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if( v == mUpButton) {
-            currentLevel.setItem();
+            if(currentLevel.checkItem() == false) {
+                Log.v("currentlevl", currentLevel.getDescription());
+            }
+            else {
+                Log.v("failure", "failure");
+            }
         }
         if( v == mDownButton) {
-            Intent intent = new Intent(mContext, MainActivity.class);
-            startActivity(intent);
+            Log.v("Level array test", currentLevel.getOptions().get(1));
         }
         if( v == mLeftButton) {
             Toast.makeText(mContext, "West", Toast.LENGTH_SHORT).show();
