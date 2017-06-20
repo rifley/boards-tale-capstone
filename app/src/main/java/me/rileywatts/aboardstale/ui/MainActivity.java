@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +14,9 @@ import android.widget.TextView;
 
 import org.parceler.Parcels;
 
+import me.rileywatts.aboardstale.Constants;
 import me.rileywatts.aboardstale.R;
+import me.rileywatts.aboardstale.models.Level;
 import me.rileywatts.aboardstale.models.Player;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{

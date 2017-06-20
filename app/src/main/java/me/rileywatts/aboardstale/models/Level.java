@@ -13,6 +13,8 @@ import java.util.List;
 public class Level {
     String title;
     String description;
+    List<String> options;
+    List<String> outcomes;
     Boolean item;
     String itemName;
     String itemDescription;
@@ -21,22 +23,33 @@ public class Level {
     String enemyDescription;
     List<String> enemyOutcomes;
     Integer healthChange;
+    String adjacentNorth;
+    String adjacentEast;
+    String adjacentSouth;
+    String adjacentWest;
 
 
 
     public Level() {}
 
-    public Level(String title, String description, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange ) {
+    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, String adjacentNorth, String adjacentEast, String adjacentSouth, String adjacentWest ) {
         this.title = title;
         this.description = description;
+
         this.item = item;
         this.itemName = itemName;
+        this.options = options;
+        this.outcomes = outcomes;
         this.itemDescription = itemDescription;
         this.enemy = enemy;
         this.enemyName = enemyName;
         this.enemyDescription = enemyDescription;
         this.enemyOutcomes = enemyOutcomes;
         this.healthChange = healthChange;
+        this.adjacentNorth = adjacentNorth;
+        this.adjacentEast = adjacentEast;
+        this.adjacentSouth = adjacentSouth;
+        this.adjacentWest = adjacentWest;
     }
 
     public String getTitle() {
@@ -45,6 +58,14 @@ public class Level {
 
     public String getDescription() {
         return description;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public List<String> getOutcomes() {
+        return outcomes;
     }
 
     public Boolean checkItem() {
@@ -76,6 +97,22 @@ public class Level {
     }
     public Integer getHealthChange() {
         return healthChange;
+    }
+
+    public String getAdjacentNorth() {
+        return adjacentNorth;
+    }
+
+    public String getAdjacentEast() {
+        return adjacentEast;
+    }
+
+    public String getAdjacentSouth() {
+        return adjacentSouth;
+    }
+
+    public String getAdjacentWest() {
+        return adjacentWest;
     }
 
     public void setItem() {

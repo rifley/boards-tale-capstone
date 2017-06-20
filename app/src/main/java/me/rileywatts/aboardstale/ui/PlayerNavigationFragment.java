@@ -2,6 +2,7 @@ package me.rileywatts.aboardstale.ui;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -14,7 +15,9 @@ import android.widget.Toast;
 
 import org.parceler.Parcels;
 
+import me.rileywatts.aboardstale.Constants;
 import me.rileywatts.aboardstale.R;
+import me.rileywatts.aboardstale.models.Level;
 import me.rileywatts.aboardstale.models.Player;
 
 /**
@@ -27,6 +30,7 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     private ImageButton mRightButton;
     private Context mContext;
     private Player mPlayer;
+    private Level currentLevel;
 
     public static PlayerNavigationFragment newInstance(Player player) {
         PlayerNavigationFragment playerNavigationFragment = new PlayerNavigationFragment();
@@ -40,6 +44,7 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPlayer = Parcels.unwrap(getArguments().getParcelable("player"));
+        currentLevel = Constants.TEST_ONE;
 
     }
 
@@ -67,17 +72,17 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if( v == mUpButton) {
-            mPlayer.setHealth(-20);
-            Log.v("data change", mPlayer.getHealth().toString());
+            currentLevel.setItem();
         }
         if( v == mDownButton) {
-            Toast.makeText(mContext, "South", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(mContext, MainActivity.class);
+            startActivity(intent);
         }
         if( v == mLeftButton) {
             Toast.makeText(mContext, "West", Toast.LENGTH_SHORT).show();
         }
         if( v == mRightButton) {
-            Toast.makeText(mContext, "East", Toast.LENGTH_SHORT).show();
+            Log.v("item check", currentLevel.checkItem().toString());
         }
     }
 }
