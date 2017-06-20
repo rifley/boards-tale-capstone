@@ -34,10 +34,11 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     private Player mPlayer;
     private Level currentLevel;
 
-    public static PlayerNavigationFragment newInstance(Player player) {
+    public static PlayerNavigationFragment newInstance(Player player, int level) {
         PlayerNavigationFragment playerNavigationFragment = new PlayerNavigationFragment();
         Bundle args = new Bundle();
         args.putParcelable("player", Parcels.wrap(player));
+        args.putInt("level", level);
         playerNavigationFragment.setArguments(args);
         return playerNavigationFragment;
     }
@@ -46,7 +47,8 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPlayer = Parcels.unwrap(getArguments().getParcelable("player"));
-        currentLevel = Constants.LEVEL_THREE;
+        int level = getArguments().getInt("level", 0);
+        currentLevel = Constants.Levels.get(level);
 
     }
 
@@ -61,6 +63,18 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
         mLeftButton = (ImageButton) v.findViewById(R.id.leftArrowImageButton);
         mRightButton = (ImageButton) v.findViewById(R.id.rightArrowImageButton);
         mContext = getActivity();
+        if(currentLevel.getAdjacentNorth() == null) {
+            mUpButton.setVisibility(View.INVISIBLE);
+        }
+        if(currentLevel.getAdjacentEast() == null) {
+            mRightButton.setVisibility(View.INVISIBLE);
+        }
+        if(currentLevel.getAdjacentSouth() == null) {
+            mDownButton.setVisibility(View.INVISIBLE);
+        }
+        if(currentLevel.getAdjacentWest() == null) {
+            mLeftButton.setVisibility(View.INVISIBLE);
+        }
 
         mUpButton.setOnClickListener(this);
         mDownButton.setOnClickListener(this);
@@ -74,21 +88,37 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if( v == mUpButton) {
-            if(currentLevel.checkItem() == false) {
-                Log.v("currentlevl", currentLevel.getDescription());
-            }
-            else {
-                Log.v("failure", "failure");
-            }
+            Intent intent = new Intent(mContext, LoadingActivity.class);
+            intent.putExtra("level", currentLevel.getAdjacentNorth());
+            intent.putExtra("player", Parcels.wrap(mPlayer));
+            startActivity(intent);
         }
         if( v == mDownButton) {
-            Log.v("Level array test", currentLevel.getOptions().get(1));
+            Intent intent = new Intent(mContext, LoadingActivity.class);
+            intent.putExtra("level", currentLevel.getAdjacentSouth());
+            intent.putExtra("player", Parcels.wrap(mPlayer));
+            startActivity(intent);
         }
         if( v == mLeftButton) {
-            Toast.makeText(mContext, "West", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(mContext, LoadingActivity.class);
+            intent.putExtra("level", currentLevel.getAdjacentWest());
+            intent.putExtra("player", Parcels.wrap(mPlayer));
+            startActivity(intent);
         }
         if( v == mRightButton) {
-            Log.v("item check", currentLevel.checkItem().toString());
+            Intent intent = new Intent(mContext, LoadingActivity.class);
+            intent.putExtra("level", currentLevel.getAdjacentEast());
+            intent.putExtra("player", Parcels.wrap(mPlayer));
+            startActivity(intent);
+        }
+    }
+
+    public void checkBooleans() {
+        if(currentLevel.checkInteraction() == false) {
+            // hide interact button
+        }
+        else {
+            // idk
         }
     }
 }

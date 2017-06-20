@@ -24,16 +24,16 @@ public class Level {
     String enemyDescription;
     List<String> enemyOutcomes;
     Integer healthChange;
-    String adjacentNorth;
-    String adjacentEast;
-    String adjacentSouth;
-    String adjacentWest;
+    Integer adjacentNorth;
+    Integer adjacentEast;
+    Integer adjacentSouth;
+    Integer adjacentWest;
 
 
 
     public Level() {}
 
-    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, String adjacentNorth, String adjacentEast, String adjacentSouth, String adjacentWest ) {
+    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, Integer adjacentNorth, Integer adjacentEast, Integer adjacentSouth, Integer adjacentWest ) {
         this.title = title;
         this.description = description;
 
@@ -105,19 +105,19 @@ public class Level {
         return healthChange;
     }
 
-    public String getAdjacentNorth() {
+    public Integer getAdjacentNorth() {
         return adjacentNorth;
     }
 
-    public String getAdjacentEast() {
+    public Integer getAdjacentEast() {
         return adjacentEast;
     }
 
-    public String getAdjacentSouth() {
+    public Integer getAdjacentSouth() {
         return adjacentSouth;
     }
 
-    public String getAdjacentWest() {
+    public Integer getAdjacentWest() {
         return adjacentWest;
     }
 

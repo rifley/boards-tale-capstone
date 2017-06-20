@@ -19,12 +19,13 @@ public class WorldActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Intent intent = getIntent();
+        int level = intent.getIntExtra("level", 0);
 
         setContentView(R.layout.activity_world);
         player = Parcels.unwrap(getIntent().getParcelableExtra("player"));
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        PlayerNavigationFragment navFragment = PlayerNavigationFragment.newInstance(player);
+        PlayerNavigationFragment navFragment = PlayerNavigationFragment.newInstance(player, level);
         ft.replace(R.id.navDisplayFrame, navFragment);
         ft.commit();
 
