@@ -15,6 +15,7 @@ public class Level {
     String description;
     List<String> options;
     List<String> outcomes;
+    Boolean interaction;
     Boolean item;
     String itemName;
     String itemDescription;
@@ -40,6 +41,7 @@ public class Level {
         this.itemName = itemName;
         this.options = options;
         this.outcomes = outcomes;
+        this.interaction = true;
         this.itemDescription = itemDescription;
         this.enemy = enemy;
         this.enemyName = enemyName;
@@ -66,6 +68,10 @@ public class Level {
 
     public List<String> getOutcomes() {
         return outcomes;
+    }
+
+    public Boolean checkInteraction() {
+        return interaction;
     }
 
     public Boolean checkItem() {
@@ -121,6 +127,10 @@ public class Level {
 
     public void setEnemy() {
         enemy = false;
+    }
+
+    public void setInteraction() {
+        interaction = false;
     }
 
 }
