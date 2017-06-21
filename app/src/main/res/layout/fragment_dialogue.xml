@@ -72,6 +72,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/cloudWhite"
+            android:padding="2sp"
             android:text="Level Description"
             android:textColor="@color/greyBlack"
             android:textStyle="italic"
@@ -133,6 +134,16 @@
             tools:layout_editor_absoluteY="81dp" />
 
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="guideline25"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+           />
+
         <ListView
             android:id="@+id/optionsListView"
             android:layout_width="0dp"
@@ -140,13 +151,15 @@
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="16dp"
+            android:divider="@color/fadedCloudWhite"
+            android:dividerHeight="10dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline27"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintLeft_toLeftOf="@+id/guideline22"
             app:layout_constraintRight_toLeftOf="@+id/guideline23"
             app:layout_constraintTop_toTopOf="@+id/guideline24"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintHorizontal_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

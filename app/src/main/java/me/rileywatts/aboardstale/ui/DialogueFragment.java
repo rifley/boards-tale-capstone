@@ -4,9 +4,11 @@ package me.rileywatts.aboardstale.ui;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -68,21 +70,23 @@ public class DialogueFragment extends Fragment {
         mDescriptionTextView = (TextView) v.findViewById(R.id.levelDescriptionTextView);
         mOptionsListView = (ListView) v.findViewById(R.id.optionsListView);
         mBackground = (ImageView) v.findViewById(R.id.scenicImageView);
+
+        mTitleTextView.setText(currentLevel.getTitle());
+        mDescriptionTextView.setText(currentLevel.getDescription());
+
         int backgroundImageResource = mContext.getResources().getIdentifier(currentLevel.getImage(), "drawable", mContext.getPackageName());
         Picasso.with(mContext).load(backgroundImageResource).fit().centerCrop().into(mBackground);
         ArrayAdapter adapter = new ArrayAdapter(mContext, android.R.layout.simple_list_item_1, currentLevel.getOptions().toArray());
         mOptionsListView.setAdapter(adapter);
 
-
-
-        mTitleTextView.setText(currentLevel.getTitle());
-        mDescriptionTextView.setText(currentLevel.getDescription());
-//        if(currentLevel.getOptions().get(1) != null) {
-//            mOptionTextView2.setText(currentLevel.getOptions().get(1));
-//        }
-//        if(currentLevel.getOptions().get(2) != null) {
-//            mOptionTextView3.setText(currentLevel.getOptions().get(2));
-//        }
+        mOptionsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Integer b = i;
+                Log.v("in fragment on click", b.toString());
+                mOptionsListView.setVisibility(View.INVISIBLE);
+            }
+        });
 
 
 
@@ -92,9 +96,3 @@ public class DialogueFragment extends Fragment {
 
 }
 
-
-//    for(int i = 0; i < currentLevel.getOptions().size(); i++) {
-//        List<TextView> levels = new ArrayList<TextView>();
-//        levels.add(mOptionTextView1);
-//        levels., mOptionTextView2, mOptionTextView3);
-//        }
