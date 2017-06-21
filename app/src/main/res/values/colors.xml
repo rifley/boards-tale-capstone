@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="cloudWhite">#E1E5E4</color>
     <color name="fadedCloudWhite">#99E1E5E4</color>
+    <color name="greyBlack">#252525</color>
 </resources>

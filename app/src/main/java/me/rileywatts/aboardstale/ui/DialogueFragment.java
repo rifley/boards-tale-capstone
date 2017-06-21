@@ -69,7 +69,7 @@ public class DialogueFragment extends Fragment {
         mOptionsListView = (ListView) v.findViewById(R.id.optionsListView);
         mBackground = (ImageView) v.findViewById(R.id.scenicImageView);
         int backgroundImageResource = mContext.getResources().getIdentifier(currentLevel.getImage(), "drawable", mContext.getPackageName());
-        Picasso.with(mContext).load(backgroundImageResource).into(mBackground);
+        Picasso.with(mContext).load(backgroundImageResource).fit().centerCrop().into(mBackground);
         ArrayAdapter adapter = new ArrayAdapter(mContext, android.R.layout.simple_list_item_1, currentLevel.getOptions().toArray());
         mOptionsListView.setAdapter(adapter);
 

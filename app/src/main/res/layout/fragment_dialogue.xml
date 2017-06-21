@@ -22,38 +22,39 @@
             android:layout_marginRight="0dp"
             android:layout_marginTop="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline24"
-            app:layout_constraintLeft_toLeftOf="@+id/guideline22"
-            app:layout_constraintRight_toLeftOf="@+id/guideline23"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            app:srcCompat="@android:drawable/btn_star_big_on"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintRight_toRightOf="parent" />
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="Level Title"
             android:background="@color/cloudWhite"
+            android:textColor="@color/greyBlack"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline20"
             app:layout_constraintLeft_toLeftOf="@+id/guideline22"
             app:layout_constraintRight_toLeftOf="@+id/guideline23"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.923" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.07"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="117dp" />
+            app:layout_constraintGuide_percent="0.1" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline21"
@@ -72,6 +73,7 @@
             android:layout_marginTop="8dp"
             android:background="@color/cloudWhite"
             android:text="Level Description"
+            android:textColor="@color/greyBlack"
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/guideline24"
             app:layout_constraintHorizontal_bias="1.0"
@@ -94,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.3" />
+            app:layout_constraintGuide_percent="0.34" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline25"
@@ -119,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.94" />
+            app:layout_constraintGuide_percent="0.97" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline22"
@@ -135,7 +137,7 @@
             android:id="@+id/optionsListView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="0dp"
@@ -143,7 +145,8 @@
             app:layout_constraintLeft_toLeftOf="@+id/guideline22"
             app:layout_constraintRight_toLeftOf="@+id/guideline23"
             app:layout_constraintTop_toTopOf="@+id/guideline24"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>
