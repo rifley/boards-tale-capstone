@@ -40,6 +40,8 @@ public class DialogueFragment extends Fragment {
     private Player mPlayer;
     private ImageView mBackground;
     private Level currentLevel;
+    private TextView selectedOption;
+    private TextView outcome;
 
 
     public static DialogueFragment newInstance(Player player, int level) {
@@ -70,6 +72,8 @@ public class DialogueFragment extends Fragment {
         mDescriptionTextView = (TextView) v.findViewById(R.id.levelDescriptionTextView);
         mOptionsListView = (ListView) v.findViewById(R.id.optionsListView);
         mBackground = (ImageView) v.findViewById(R.id.scenicImageView);
+        selectedOption = (TextView) v.findViewById(R.id.selectedOptionTextView);
+        outcome = (TextView) v.findViewById(R.id.outcomeTextView);
 
         mTitleTextView.setText(currentLevel.getTitle());
         mDescriptionTextView.setText(currentLevel.getDescription());
@@ -83,8 +87,12 @@ public class DialogueFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Integer b = i;
-                Log.v("in fragment on click", b.toString());
+
                 mOptionsListView.setVisibility(View.INVISIBLE);
+                selectedOption.setText("You " + currentLevel.getOptions().get(b));
+                outcome.setText(currentLevel.getOutcomes().get(0));
+
+
             }
         });
 
