@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.WorldActivity" />
+        <activity android:name=".ui.WorldActivity"
+            android:theme="@style/NoBar"/>
         <activity android:name=".ui.LoadingActivity"></activity>
     </application>
 
