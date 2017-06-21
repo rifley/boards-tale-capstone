@@ -16,7 +16,7 @@ public class Constants {
     public static Level LEVEL_HOME = new Level("Home Sweet Home", "Home is where the heart is, and also your house.", Arrays.asList("Take a nap"), Arrays.asList("You feel stronger, healthier, and revitalised.", "You had a nightmare! Though you feel revitalised, you can't shake a feeling of dread and despair"), false, null, null, false, null, null, null, 80, 2, 4, 7, 5);
 
 
-    public static Level LEVEL_ONE = new Level("Apple Orchard", "You see an abundance of delicious apples gleaming with sunshine from here to the horizon", Arrays.asList("Eat an apple", "Save an apple for later"), Arrays.asList("You feel stronger and healthier. You wonder if the apple was magic. It was probably just a good apple", "While trying to pocket the apple for later, you have an overwhelming feeling of guilt. You decide to just drop it."), false, null, null, false, null, null, null, 30, null, 2, 5, null);
+    public static Level LEVEL_ONE = new Level("Sword in the Loam", "You notice something strange in the ground up ahead. It is covered in dirt and spider webs.", Arrays.asList("Grab the thing with confidence", "Attempt to get a better look at it from closer up"), Arrays.asList("From the loam you pull a sword, accidently cutting off your toe due to its momentum.", "You realise the thing is a sword hilt. You prepare yourself and yank it out with appropriate force."), true, "Sword", "Dull and rusty, but still effective", false, null, null, null, -20, null, 2, null, null);
 
 
     public static Level LEVEL_TWO = new Level("Fields of Strife", "You notice your wife lying in the field, unresponsive", Arrays.asList("Shake her and scream at the top of your lungs to wake her up.", "Check to see if she is breathing"), Arrays.asList("Your wife, startled and annoyed, wakes up and says 'What the kuss? I was just taking a nap. Leave me alone you old fool'", "You realise your wife is just sleeping. You gently wake her up and she says 'Hi you! I seem to have drifted off. Im going back to sleep now'"), false, null, null, false, null, null, null, null, null, 3, 0, 1);
@@ -30,7 +30,18 @@ public class Constants {
 
     public static Level LEVEL_SIX = new Level("Slithery Snek", "You see a snake slithering in the grass. He notices you, noticing him, and he approaches you and says, 'Salutationsss.'", Arrays.asList("A talking snake? Stomp it with your foot", "You reply, 'Hello friend, it is great to meet you. You are a wonderful individual.'"), Arrays.asList("The snake dodges your attack and hisses at you.", "Pleased with your humble nature, the snake happily replies,'As are you, Im sure! Take care now, Im off to find a pretty flower!'"), false, null, null, true, "Slithery Snek", "Small but precise, this snake knows who they are.", Arrays.asList("It bites your foot and slithers off, exclaming 'You'll regret that soon enough.'"), -30, 5, 7, null, null);
 
+    public static Level LEVEL_SEVEN = new Level("Apple Orchard", "You see an abundance of delicious apples gleaming with sunshine from here to the horizon", Arrays.asList("Eat an apple", "Save an apple for later"), Arrays.asList("You feel stronger and healthier. You wonder if the apple was magic. It was probably just a good apple", "While trying to pocket the apple for later, you have an overwhelming feeling of guilt. You decide to just drop it."), false, null, null, false, null, null, null, 30, 0, null, null, 6);  // add game win after boss works
 
-    public static List<Level> Levels = Arrays.asList(LEVEL_HOME, LEVEL_ONE, LEVEL_TWO, LEVEL_THREE, LEVEL_FOUR, LEVEL_FIVE, LEVEL_SIX);
+    public static Level LEVEL_EIGHT = new Level("Inside Cave", "You see a faint glow in the blackness. You venture further and see a glowing set of armor", Arrays.asList("Grab the armor", "Inspect the armor"), Arrays.asList("As you grab the armor, the cave begins to shake and starts to crumble. You make a break for it", "The armor seems to have a booty trap tied to it. With careful attention to detail, you successfully disarm the trap and grab the armor."), true, "Armor Set", "Armor of the Ancient Kings", true, "Cave", "Cave is fallinga apart", Arrays.asList("Part of the ceiling falls and hits you in the head."), -60, 4, null, null, null);
+
+    public static Level LEVEL_WIN = new Level("Floating Gate of Destiny", "You da best", Arrays.asList("Grab the armor", "Inspect the armor"), Arrays.asList("As you grab the armor, the cave begins to shake and starts to crumble. You make a break for it", "The armor seems to have a booty trap tied to it. With careful attention to detail, you successfully disarm the trap and grab the armor."), true, "Armor Set", "Armor of the Ancient Kings", true, "Cave", "Cave is fallinga apart", Arrays.asList("Part of the ceiling falls and hits you in the head."), -60, 7, null, null, null);
+
+    public static Level LEVEL_BOSS = new Level("Boss Todd", "As you enter town, you are quickly noticed by the man giving orders. He orders his men to surround you", Arrays.asList("Fight", "Run"), Arrays.asList("Something"), false, null, null, true, "Boss Todd", "A ruthless brute with muscles on his muscles.", Arrays.asList("You die", "You live"), -100, null, 5, null, null);
+
+
+
+
+
+    public static List<Level> Levels = Arrays.asList(LEVEL_HOME, LEVEL_ONE, LEVEL_TWO, LEVEL_THREE, LEVEL_FOUR, LEVEL_FIVE, LEVEL_SIX, LEVEL_SEVEN, LEVEL_EIGHT, LEVEL_WIN, LEVEL_BOSS);
 }
 
