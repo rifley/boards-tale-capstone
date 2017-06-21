@@ -2,6 +2,7 @@ package me.rileywatts.aboardstale.models;
 
 import org.parceler.Parcel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,12 +29,14 @@ public class Level {
     Integer adjacentEast;
     Integer adjacentSouth;
     Integer adjacentWest;
+//    File imgFile;
+
 
 
 
     public Level() {}
 
-    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, Integer adjacentNorth, Integer adjacentEast, Integer adjacentSouth, Integer adjacentWest ) {
+    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, Integer adjacentNorth, Integer adjacentEast, Integer adjacentSouth, Integer adjacentWest) {
         this.title = title;
         this.description = description;
 
@@ -52,6 +55,7 @@ public class Level {
         this.adjacentEast = adjacentEast;
         this.adjacentSouth = adjacentSouth;
         this.adjacentWest = adjacentWest;
+//        this.imgFile = imgFile;
     }
 
     public String getTitle() {
@@ -120,6 +124,10 @@ public class Level {
     public Integer getAdjacentWest() {
         return adjacentWest;
     }
+
+//    public File getImgFile() {
+//        return imgFile;
+//    }
 
     public void setItem() {
         item = false;
