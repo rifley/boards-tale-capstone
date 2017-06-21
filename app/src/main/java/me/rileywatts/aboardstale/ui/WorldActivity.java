@@ -26,7 +26,9 @@ public class WorldActivity extends AppCompatActivity {
         player = Parcels.unwrap(getIntent().getParcelableExtra("player"));
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         PlayerNavigationFragment navFragment = PlayerNavigationFragment.newInstance(player, level);
+        DialogueFragment dialogueFragment = DialogueFragment.newInstance(player, level);
         ft.replace(R.id.navDisplayFrame, navFragment);
+        ft.replace(R.id.dialogueDisplayFrame, dialogueFragment);
         ft.commit();
 
         Log.v("inside World", player.getName());
