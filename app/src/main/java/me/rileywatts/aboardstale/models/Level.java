@@ -29,14 +29,14 @@ public class Level {
     Integer adjacentEast;
     Integer adjacentSouth;
     Integer adjacentWest;
-//    File imgFile;
+    String image;
 
 
 
 
     public Level() {}
 
-    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, Integer adjacentNorth, Integer adjacentEast, Integer adjacentSouth, Integer adjacentWest) {
+    public Level(String title, String description, List<String> options, List<String> outcomes, Boolean item, String itemName, String itemDescription, Boolean enemy, String enemyName, String enemyDescription, List<String> enemyOutcomes,Integer healthChange, Integer adjacentNorth, Integer adjacentEast, Integer adjacentSouth, Integer adjacentWest, String image) {
         this.title = title;
         this.description = description;
 
@@ -55,7 +55,7 @@ public class Level {
         this.adjacentEast = adjacentEast;
         this.adjacentSouth = adjacentSouth;
         this.adjacentWest = adjacentWest;
-//        this.imgFile = imgFile;
+        this.image = image;
     }
 
     public String getTitle() {
@@ -125,9 +125,9 @@ public class Level {
         return adjacentWest;
     }
 
-//    public File getImgFile() {
-//        return imgFile;
-//    }
+    public String getImage() {
+        return image;
+    }
 
     public void setItem() {
         item = false;

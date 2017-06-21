@@ -7,7 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 import org.w3c.dom.Text;
@@ -28,11 +33,10 @@ import me.rileywatts.aboardstale.models.Player;
 public class DialogueFragment extends Fragment {
     private TextView mTitleTextView;
     private TextView mDescriptionTextView;
-    private TextView mOptionTextView1;
-    private TextView mOptionTextView2;
-    private TextView mOptionTextView3;
+    private ListView mOptionsListView;
     private Context mContext;
     private Player mPlayer;
+    private ImageView mBackground;
     private Level currentLevel;
 
 
@@ -62,13 +66,17 @@ public class DialogueFragment extends Fragment {
         mContext = getActivity();
         mTitleTextView = (TextView) v.findViewById(R.id.titleTextView);
         mDescriptionTextView = (TextView) v.findViewById(R.id.levelDescriptionTextView);
-        mOptionTextView1 = (TextView) v.findViewById(R.id.optionTextView1);
-        mOptionTextView2 = (TextView) v.findViewById(R.id.optionTextView2);
-        mOptionTextView3 = (TextView) v.findViewById(R.id.optionTextView3);
+        mOptionsListView = (ListView) v.findViewById(R.id.optionsListView);
+        mBackground = (ImageView) v.findViewById(R.id.scenicImageView);
+        int backgroundImageResource = mContext.getResources().getIdentifier(currentLevel.getImage(), "drawable", mContext.getPackageName());
+        Picasso.with(mContext).load(backgroundImageResource).into(mBackground);
+        ArrayAdapter adapter = new ArrayAdapter(mContext, android.R.layout.simple_list_item_1, currentLevel.getOptions().toArray());
+        mOptionsListView.setAdapter(adapter);
+
+
 
         mTitleTextView.setText(currentLevel.getTitle());
         mDescriptionTextView.setText(currentLevel.getDescription());
-        mOptionTextView1.setText(currentLevel.getOptions().get(0));
 //        if(currentLevel.getOptions().get(1) != null) {
 //            mOptionTextView2.setText(currentLevel.getOptions().get(1));
 //        }
