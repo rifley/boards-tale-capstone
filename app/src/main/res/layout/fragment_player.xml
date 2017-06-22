@@ -9,21 +9,22 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/border">
 
         <ImageView
             android:id="@+id/playerImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline39"
             app:layout_constraintLeft_toLeftOf="@+id/guideline33"
             app:layout_constraintRight_toLeftOf="@+id/guideline34"
             app:layout_constraintTop_toTopOf="@+id/guideline40"
-            app:srcCompat="@drawable/boar" />
+            app:srcCompat="@drawable/boar"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1" />
 
         <TextView
             android:id="@+id/playerNameTextView"
@@ -39,28 +40,36 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline31"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="8dp"
-            app:layout_constraintVertical_bias="0.962" />
+            app:layout_constraintVertical_bias="0.962"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline29"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
+            app:layout_constraintGuide_percent="0.5"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="192dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline30"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.35812134" />
+            app:layout_constraintGuide_percent="0.35812134"
+            tools:layout_editor_absoluteY="264dp"
+            tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline31"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.17" />
+            app:layout_constraintGuide_percent="0.17"
+            tools:layout_editor_absoluteY="168dp"
+            tools:layout_editor_absoluteX="0dp" />
 
         <TextView
             android:id="@+id/playerHealthTextView"
@@ -76,15 +85,19 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline30"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintHorizontal_bias="0.192" />
+            app:layout_constraintHorizontal_bias="0.192"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <ImageView
             android:id="@+id/swordImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline32"
             app:layout_constraintLeft_toLeftOf="@+id/guideline33"
@@ -104,156 +117,183 @@
             app:layout_constraintTop_toTopOf="@+id/guideline30"
             app:srcCompat="@drawable/armor"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline32" />
+            app:layout_constraintBottom_toTopOf="@+id/guideline32"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_constraintLeft_creator="1" />
 
         <ImageView
             android:id="@+id/keyImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="0dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline38"
             app:layout_constraintLeft_toLeftOf="@+id/guideline33"
             app:layout_constraintRight_toLeftOf="@+id/guideline34"
             app:layout_constraintTop_toTopOf="@+id/guideline37"
-            app:srcCompat="@drawable/key" />
+            app:srcCompat="@drawable/key"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            android:layout_marginEnd="8dp" />
 
         <ImageView
             android:id="@+id/wingsImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline38"
             app:layout_constraintLeft_toLeftOf="@+id/guideline35"
             app:layout_constraintRight_toLeftOf="@+id/guideline36"
             app:layout_constraintTop_toTopOf="@+id/guideline37"
-            app:srcCompat="@drawable/wings" />
+            app:srcCompat="@drawable/wings"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline32"
-            app:layout_constraintGuide_begin="346dp"
-            android:orientation="horizontal" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6771037" />
 
         <TextView
             android:id="@+id/noSwordTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="0dp"
+            android:layout_marginEnd="7dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
+            android:layout_marginStart="7dp"
             android:layout_marginTop="0dp"
             android:background="@color/fadedRed"
-            app:layout_constraintBottom_toBottomOf="@+id/swordImageView"
+            app:layout_constraintBottom_toTopOf="@+id/guideline32"
             app:layout_constraintLeft_toLeftOf="@+id/swordImageView"
             app:layout_constraintRight_toRightOf="@+id/swordImageView"
             app:layout_constraintTop_toTopOf="@+id/swordImageView"
-            app:layout_constraintVertical_bias="0.333" />
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1" />
 
         <TextView
             android:id="@+id/noArmorTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
             android:background="@color/fadedRed"
             app:layout_constraintBottom_toBottomOf="@+id/armorImageView"
             app:layout_constraintLeft_toLeftOf="@+id/armorImageView"
             app:layout_constraintRight_toRightOf="@+id/armorImageView"
-            app:layout_constraintTop_toTopOf="@+id/armorImageView" />
+            app:layout_constraintTop_toTopOf="@+id/armorImageView"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1" />
 
         <TextView
             android:id="@+id/noKeyTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
             android:background="@color/fadedRed"
             app:layout_constraintBottom_toBottomOf="@+id/keyImageView"
             app:layout_constraintHorizontal_bias="0.615"
             app:layout_constraintLeft_toLeftOf="@+id/guideline33"
             app:layout_constraintRight_toRightOf="@+id/keyImageView"
             app:layout_constraintTop_toTopOf="@+id/keyImageView"
-            app:layout_constraintVertical_bias="0.307" />
+            app:layout_constraintVertical_bias="0.307"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintBottom_creator="1" />
 
         <TextView
             android:id="@+id/noWingsTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
             android:background="@color/fadedRed"
             app:layout_constraintBottom_toBottomOf="@+id/wingsImageView"
             app:layout_constraintLeft_toLeftOf="@+id/guideline35"
             app:layout_constraintRight_toLeftOf="@+id/guideline36"
-            app:layout_constraintTop_toTopOf="@+id/wingsImageView" />
+            app:layout_constraintTop_toTopOf="@+id/wingsImageView"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline33"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.114583336" />
+            app:layout_constraintGuide_percent="0.114583336"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="44dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline34"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.38802084" />
+            app:layout_constraintGuide_percent="0.38802084"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="149dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline35"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5677083" />
+            app:layout_constraintGuide_percent="0.5677083"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="218dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline36"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.890625" />
+            app:layout_constraintGuide_percent="0.890625"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="342dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline37"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.7475538" />
+            app:layout_constraintGuide_percent="0.7475538"
+            tools:layout_editor_absoluteY="463dp"
+            tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline38"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.9217221" />
+            app:layout_constraintGuide_percent="0.9217221"
+            tools:layout_editor_absoluteY="552dp"
+            tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline39"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.28375733" />
+            app:layout_constraintGuide_percent="0.28375733"
+            tools:layout_editor_absoluteY="226dp"
+            tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline40"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.05" />
+            app:layout_constraintGuide_percent="0.05"
+            tools:layout_editor_absoluteY="107dp"
+            tools:layout_editor_absoluteX="0dp" />
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

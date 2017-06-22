@@ -3,6 +3,7 @@ package me.rileywatts.aboardstale.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.parceler.Parcels;
@@ -33,6 +35,8 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
     private Context mContext;
     private Player mPlayer;
     private Level currentLevel;
+    private TextView navigationHeader;
+
 
     public static PlayerNavigationFragment newInstance(Player player, int level) {
         PlayerNavigationFragment playerNavigationFragment = new PlayerNavigationFragment();
@@ -58,10 +62,13 @@ public class PlayerNavigationFragment extends Fragment implements View.OnClickLi
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_player_navigation, container, false);
+        Typeface mGhibliFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ghibli.ttf");
         mUpButton = (ImageButton) v.findViewById(R.id.upArrowImageButton);
         mDownButton = (ImageButton) v.findViewById(R.id.downArrowImageButton);
         mLeftButton = (ImageButton) v.findViewById(R.id.leftArrowImageButton);
         mRightButton = (ImageButton) v.findViewById(R.id.rightArrowImageButton);
+        navigationHeader = (TextView) v.findViewById(R.id.navigationTextView);
+        navigationHeader.setTypeface(mGhibliFont);
         mContext = getActivity();
         if(currentLevel.getAdjacentNorth() == null) {
             mUpButton.setVisibility(View.INVISIBLE);
