@@ -14,7 +14,7 @@ import me.rileywatts.aboardstale.models.Level;
 public class Constants {
 
 
-    public static Level LEVEL_HOME = new Level("Home Sweet Home", "Home is where the heart is, and also your house.", Arrays.asList("Take a nap"), Arrays.asList("You feel stronger, healthier, and revitalised.", "You had a nightmare! Though you feel revitalised, you can't shake a feeling of dread and despair"), false, null, null, false, null, null, null, 80, 2, 4, 7, 5, "home");
+    public static Level LEVEL_HOME = new Level("Home Sweet Home", "Home is where the heart is, and also your house.", Arrays.asList("Take a nap", "Go for a swim", "Ponder your existence"), Arrays.asList("You feel stronger, healthier, and revitalised.", "You had a nightmare! Though you feel revitalised, you can't shake a feeling of dread and despair"), false, null, null, false, null, null, null, 80, 2, 4, 7, 5, "home");
 
 
     public static Level LEVEL_ONE = new Level("Sword in the Loam", "You notice something strange in the ground up ahead. It is covered in dirt and spider webs.", Arrays.asList("Grab the thing with confidence", "Attempt to get a better look at it from closer up"), Arrays.asList("From the loam you pull a sword, accidently cutting off your toe due to its momentum.", "You realise the thing is a sword hilt. You prepare yourself and yank it out with appropriate force."), true, "Sword", "Dull and rusty, but still effective", false, null, null, null, -20, null, 2, null, null, "sword");
