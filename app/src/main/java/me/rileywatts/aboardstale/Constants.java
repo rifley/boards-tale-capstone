@@ -39,10 +39,12 @@ public class Constants {
 
     public static Level LEVEL_BOSS = new Level("Boss Todd", "As you enter town, you are quickly noticed by the man giving orders. He orders his men to surround you", Arrays.asList("Fight", "Run"), Arrays.asList("Something"), false, null, null, true, "Boss Todd", "A ruthless brute with muscles on his muscles.", Arrays.asList("You die", "You live"), -100, null, 5, null, null, "cave");
 
+    public static Level LEVEL_HIDDEN = new Level("Riddler's Bounty", "You see the Wings of the Ancients, floating in the middle of a bottemless pit.'", Arrays.asList("Throw a rock at the wings", "Ask the hooded figure for help", "Run and jump for the wings"), Arrays.asList("You fall in the pit by accident"), true, "Wings", "Of the Ancients. Allows wielder to fly short distances", true, "Bottomless Pit", "A pit with no bottom", Arrays.asList("You die"), -100, null, null, null, 3, "riddlerrock");
 
 
 
 
-    public static List<Level> Levels = Arrays.asList(LEVEL_HOME, LEVEL_ONE, LEVEL_TWO, LEVEL_THREE, LEVEL_FOUR, LEVEL_FIVE, LEVEL_SIX, LEVEL_SEVEN, LEVEL_EIGHT, LEVEL_WIN, LEVEL_BOSS);
+
+    public static List<Level> Levels = Arrays.asList(LEVEL_HOME, LEVEL_ONE, LEVEL_TWO, LEVEL_THREE, LEVEL_FOUR, LEVEL_FIVE, LEVEL_SIX, LEVEL_SEVEN, LEVEL_EIGHT, LEVEL_WIN, LEVEL_BOSS, LEVEL_HIDDEN);
 }
 
