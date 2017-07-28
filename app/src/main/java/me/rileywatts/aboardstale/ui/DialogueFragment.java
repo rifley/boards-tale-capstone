@@ -90,7 +90,11 @@ public class DialogueFragment extends Fragment {
 
                 mOptionsListView.setVisibility(View.INVISIBLE);
                 selectedOption.setText("You " + currentLevel.getOptions().get(b));
-                outcome.setText(currentLevel.getOutcomes().get(0));
+                try {
+                    outcome.setText(currentLevel.getOutcomes().get(b));
+                } catch (IndexOutOfBoundsException e) {
+                    outcome.setText(currentLevel.getOutcomes().get(0));
+                }
 
 
             }
