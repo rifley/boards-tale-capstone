@@ -19,8 +19,8 @@ A choose your way adventure game for Android. A Board's Tale tells the story of 
 #### MVP
 
 - [x] Functioning navigation fragment
-- [ ] Player Inventory fragment
-- [ ] Allow players to travel the world with some interactivity
+- [x] Player Inventory fragment
+- [x] Allow players to travel the world with some interactivity
 
 
 #### Wants
